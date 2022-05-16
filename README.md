@@ -4,7 +4,7 @@
 
 ## MUI[https://mui.com/]
 
-`npm install @mui/material @emotion/react @emotion/styled`
+`npm install @mui/material @emotion/react @emotion/styled @mui/icons-material`
 
 ## How to customize[https://mui.com/zh/material-ui/customization/how-to-customize/]
 
