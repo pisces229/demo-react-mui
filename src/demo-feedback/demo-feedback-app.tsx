@@ -14,9 +14,9 @@ import {
   DialogActions,
   Skeleton,
   Snackbar,
-} from "@mui/material";
-import React from "react";
-import { useState } from "react";
+} from '@mui/material';
+import React from 'react';
+import { useState } from 'react';
 
 export function DemoFeedbackApp() {
   return (
@@ -61,7 +61,7 @@ const DemoBackdrop = () => {
       <Button onClick={() => setValue(true)}>Open</Button>
       <Backdrop
         sx={{
-          color: "#fff",
+          color: '#fff',
           zIndex: (theme: { zIndex: { drawer: number } }) =>
             theme.zIndex.drawer + 1,
         }}
@@ -114,7 +114,7 @@ const DemoSnackbar = () => {
       <Button onClick={() => setValue(true)}>Open</Button>
       <Snackbar
         open={value}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         autoHideDuration={2000}
         onClose={() => setValue(false)}
         message="Snackbar !"

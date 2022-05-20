@@ -1,5 +1,13 @@
-import { Box, Button, Fade, Modal, Popover, Popper, Typography } from "@mui/material";
-import { useState } from "react";
+import {
+  Box,
+  Button,
+  Fade,
+  Modal,
+  Popover,
+  Popper,
+  Typography,
+} from '@mui/material';
+import { useState } from 'react';
 
 export function DemoUtilsApp() {
   return (
@@ -30,9 +38,7 @@ const DemoUtilsModal = () => {
       <Button onClick={() => setValue(true)}>Open modal</Button>
       <Modal open={value} onClose={() => setValue(false)}>
         <Box sx={style}>
-          <Typography>
-            Text in a modal.
-          </Typography>
+          <Typography>Text in a modal.</Typography>
         </Box>
       </Modal>
     </>
@@ -41,7 +47,8 @@ const DemoUtilsModal = () => {
 
 const DemoUtilsPopover = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
-  const onClick = (event: React.MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget);
+  const onClick = (event: React.MouseEvent<HTMLButtonElement>) =>
+    setAnchorEl(event.currentTarget);
   const onClose = () => setAnchorEl(null);
   return (
     <>
@@ -50,8 +57,8 @@ const DemoUtilsPopover = () => {
         open={Boolean(anchorEl)}
         onClose={onClose}
         anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'center', horizontal: 'center', }}
-        transformOrigin={{ vertical: 'center', horizontal: 'center', }}
+        anchorOrigin={{ vertical: 'center', horizontal: 'center' }}
+        transformOrigin={{ vertical: 'center', horizontal: 'center' }}
       >
         <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
       </Popover>

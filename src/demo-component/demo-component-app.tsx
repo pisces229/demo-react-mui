@@ -11,9 +11,9 @@ import {
   Select,
   Switch,
   TextField,
-} from "@mui/material";
-import { SelectChangeEvent } from "@mui/material/Select";
-import { useState } from "react";
+} from '@mui/material';
+import { SelectChangeEvent } from '@mui/material/Select';
+import { useState } from 'react';
 
 export function DemoComponentApp() {
   return (
@@ -33,7 +33,7 @@ export function DemoComponentApp() {
 const DemoAutocomplete = () => {
   // const [inputOption, setInputOption] = useState<{id: number, label: string} | null>(null);
   const [inputOption, setInputOption] = useState<string | null>(null);
-  const [inputValue, setInputValue] = useState<string>("");
+  const [inputValue, setInputValue] = useState<string>('');
   // const options = [
   //   { id: 0, label: 'A' },
   //   { id: 1, label: 'B' },
@@ -46,26 +46,26 @@ const DemoAutocomplete = () => {
   //   { id: 8, label: 'I' },
   //   { id: 9, label: 'J' },
   // ];
-  const options = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+  const options = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
   const onChangeOption = (
     event: React.SyntheticEvent<Element, Event>,
     value: string | null,
     reason: AutocompleteChangeReason,
-    details?: AutocompleteChangeDetails<string>
+    details?: AutocompleteChangeDetails<string>,
   ) => {
-    console.log("onChange", value);
-    console.log("onChange", reason);
-    console.log("onChange", details);
+    console.log('onChange', value);
+    console.log('onChange', reason);
+    console.log('onChange', details);
     setInputOption(value);
   };
   const onInputChange = (
     event: React.SyntheticEvent<Element, Event>,
     value: string,
-    reason: AutocompleteInputChangeReason
+    reason: AutocompleteInputChangeReason,
   ) => {
-    console.log("onInputChange", event);
-    console.log("onInputChange", value);
-    console.log("onInputChange", reason);
+    console.log('onInputChange', event);
+    console.log('onInputChange', value);
+    console.log('onInputChange', reason);
     setInputValue(value);
   };
   return (
@@ -85,7 +85,7 @@ const DemoAutocomplete = () => {
 };
 
 const DemoButton = () => {
-  const onClick = () => console.log("Button");
+  const onClick = () => console.log('Button');
   return (
     <Button name="Button" variant="contained" color="success" onClick={onClick}>
       Button
@@ -96,7 +96,7 @@ const DemoButton = () => {
 const DemoCheckbox = () => {
   const onChange = (
     event: React.ChangeEvent<HTMLInputElement>,
-    checked: boolean
+    checked: boolean,
   ) => {
     console.log(event.target.name, checked);
   };
@@ -110,10 +110,10 @@ const DemoCheckbox = () => {
 };
 
 const DemoRadio = () => {
-  const [value, setValue] = useState<string>("");
+  const [value, setValue] = useState<string>('');
   const onChange = (
     event: React.ChangeEvent<HTMLInputElement>,
-    checked: boolean
+    checked: boolean,
   ) => {
     console.log(event.target.name, checked);
     setValue(event.target.value);
@@ -123,13 +123,13 @@ const DemoRadio = () => {
       <Radio
         name="Radio"
         value="a"
-        checked={value === "a"}
+        checked={value === 'a'}
         onChange={onChange}
       />
       <Radio
         name="Radio"
         value="b"
-        checked={value === "b"}
+        checked={value === 'b'}
         onChange={onChange}
       />
     </>
@@ -138,7 +138,7 @@ const DemoRadio = () => {
 
 const DemoSelect = () => {
   // const [value, setValue] = useState<string>('');
-  const [value, setValue] = useState<string[]>(["1", "2"]);
+  const [value, setValue] = useState<string[]>(['1', '2']);
   const onChange = (event: SelectChangeEvent<string[]>) => {
     console.log(event.target.name, event.target.value);
     setValue(event.target.value as string[]);
@@ -175,7 +175,7 @@ const DemoSwitch = () => {
 };
 
 const DemoTextField = () => {
-  const [value, setValue] = useState<string>("");
+  const [value, setValue] = useState<string>('');
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.name, event.target.value);
     setValue(event.target.value);

@@ -8,6 +8,10 @@
 
 ## [Customization](https://mui.com/zh/material-ui/customization/theming/)
 
+Prettier
+
+`npm install --save-dev prettier`
+
 ### Self Certification
 
 [Install Chocolatey with PowerShell](https://docs.chocolatey.org/en-us/choco/setup)

@@ -3,8 +3,8 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export function DemoSurfacesApp() {
   return (
@@ -24,9 +24,9 @@ const DemoSurfacesAccordion = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            The pain itself is love,
-            the main storage system. sign up from the comments of the lakes,
-            it is the love of the lion and the carousing of the lion.
+            The pain itself is love, the main storage system. sign up from the
+            comments of the lakes, it is the love of the lion and the carousing
+            of the lion.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -36,9 +36,9 @@ const DemoSurfacesAccordion = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          The pain itself is love,
-            the main storage system. sign up from the comments of the lakes,
-            it is the love of the lion and the carousing of the lion.
+            The pain itself is love, the main storage system. sign up from the
+            comments of the lakes, it is the love of the lion and the carousing
+            of the lion.
           </Typography>
         </AccordionDetails>
       </Accordion>

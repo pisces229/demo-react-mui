@@ -1,4 +1,4 @@
-import { Grid, Paper, Stack } from "@mui/material";
+import { Grid, Paper, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 export function DemoLayoutApp() {
@@ -39,7 +39,7 @@ const DemoLayoutGrid = () => {
       </Grid>
     </>
   );
-}
+};
 
 const DemoLayoutStack = () => {
   return (
@@ -49,7 +49,7 @@ const DemoLayoutStack = () => {
         <Item>Item 2</Item>
         <Item>Item 3</Item>
       </Stack>
-      <br/>
+      <br />
       <Stack direction="row" spacing={2}>
         <Item>Item 1</Item>
         <Item>Item 2</Item>
@@ -57,4 +57,4 @@ const DemoLayoutStack = () => {
       </Stack>
     </>
   );
-}
+};

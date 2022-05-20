@@ -1,10 +1,9 @@
-
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, TextField } from '@mui/material';
 
 export function DemoThemingApp() {
   const attributes = {
-    options: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+    options: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
   };
   return (
     <>
@@ -47,8 +46,8 @@ const AutocompleteTheme = createTheme({
       },
       styleOverrides: {
         inputRoot: {
-          padding: "0px",
-          background: "lightblue",
+          padding: '0px',
+          background: 'lightblue',
         },
         // input: {
         //   background: "lightblue",
@@ -60,14 +59,14 @@ const AutocompleteTheme = createTheme({
 });
 // styled
 const AutocompleteStyle = styled(Autocomplete)({
-  ".MuiOutlinedInput-root": {
-    "&.MuiInputBase-root": {
-      "&.MuiInputBase-colorPrimary": {
-        "&.MuiInputBase-fullWidth": {
-          "&.MuiInputBase-formControl": {
-            "&.MuiInputBase-adornedEnd": {
-              "&.MuiAutocomplete-inputRoot": {
-                padding: "0px",
+  '.MuiOutlinedInput-root': {
+    '&.MuiInputBase-root': {
+      '&.MuiInputBase-colorPrimary': {
+        '&.MuiInputBase-fullWidth': {
+          '&.MuiInputBase-formControl': {
+            '&.MuiInputBase-adornedEnd': {
+              '&.MuiAutocomplete-inputRoot': {
+                padding: '0px',
               },
             },
           },
@@ -75,10 +74,10 @@ const AutocompleteStyle = styled(Autocomplete)({
       },
     },
   },
-  ".MuiOutlinedInput-input": {
-    "&.MuiInputBase-input": {
-      "&.MuiInputBase-inputAdornedEnd": {
-        background: "lightblue",
+  '.MuiOutlinedInput-input': {
+    '&.MuiInputBase-input': {
+      '&.MuiInputBase-inputAdornedEnd': {
+        background: 'lightblue',
       },
     },
   },
