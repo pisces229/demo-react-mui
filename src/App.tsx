@@ -12,13 +12,13 @@ import { DemoUtilsApp } from './demo-utils/demo-utils-app';
 function App() {
   return (
     <>
-      {/* <DemoComponentApp /> */}
+      <DemoComponentApp />
       {/* <DemoDataDisplayApp /> */}
       {/* <DemoFeedbackApp /> */}
       {/* <DemoSurfacesApp /> */}
       {/* <DemoNavigationApp /> */}
       {/* <DemoLayoutApp /> */}
-      <DemoUtilsApp />
+      {/* <DemoUtilsApp /> */}
       {/* <DemoThemingApp /> */}
     </>
   );

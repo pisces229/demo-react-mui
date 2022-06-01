@@ -13,7 +13,8 @@ import {
   TextField,
 } from '@mui/material';
 import { SelectChangeEvent } from '@mui/material/Select';
-import { useState } from 'react';
+import UploadIcon from '@mui/icons-material/Upload';
+import { Fragment, useState } from 'react';
 
 export function DemoComponentApp() {
   return (
@@ -26,6 +27,7 @@ export function DemoComponentApp() {
       <DemoSelect />
       <DemoSwitch />
       <DemoTextField />
+      <DemoFileUpload />
     </>
   );
 }
@@ -192,3 +194,40 @@ const DemoTextField = () => {
     </>
   );
 };
+
+const DemoFileUpload = () => {
+  const [value, setValue] = useState<File[]>([]);
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.name, event.target.files);
+    let files: File[] = [];
+    if (event.target.files) {
+      for (let i = 0; i < event.target.files!.length; ++i) {
+        if (event.target.files.item(i)) {
+          files.push(event.target.files.item(i)!);
+        }
+      }
+    }
+    setValue(files);
+  };
+  return (
+    <>
+      <label>
+        <input name="FileUpload" type="file" multiple hidden onChange={onChange} />
+        <Button variant="contained" component="span" endIcon={<UploadIcon />}>
+          Upload
+        </Button>
+      </label>
+      { value &&
+        value.map((item, index) => (
+          <Fragment key={index}>
+            <br />
+            <label >
+              {item.name}-{item.size}
+            </label>
+          </Fragment>
+        ))
+      }
+    </>
+  );
+};
+
