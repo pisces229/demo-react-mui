@@ -15,6 +15,8 @@ import {
 import { SelectChangeEvent } from '@mui/material/Select';
 import UploadIcon from '@mui/icons-material/Upload';
 import { Fragment, useState } from 'react';
+import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 export function DemoComponentApp() {
   return (
@@ -23,6 +25,7 @@ export function DemoComponentApp() {
       <DemoAutocomplete />
       <DemoButton />
       <DemoCheckbox />
+      <DemoDatepicker />
       <DemoRadio />
       <DemoSelect />
       <DemoSwitch />
@@ -107,6 +110,25 @@ const DemoCheckbox = () => {
       <Checkbox color="secondary" name="secondary" onChange={onChange} />
       <Checkbox color="success" name="success" onChange={onChange} />
       <Checkbox color="default" name="default" onChange={onChange} />
+    </>
+  );
+};
+
+const DemoDatepicker = () => {
+  const [value, setValue] = useState<Date | null>(null);
+  const onChange = (value: Date | null) => {
+    setValue(value);
+  };
+  return (
+    <>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <DatePicker
+          inputFormat="YYYY/MM/DD"
+          value={value}
+          onChange={onChange}
+          renderInput={(params) => <TextField {...params} />}
+        />
+      </LocalizationProvider>
     </>
   );
 };
