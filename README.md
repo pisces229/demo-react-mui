@@ -6,6 +6,10 @@
 
 `npm install @mui/material @emotion/react @emotion/styled @mui/icons-material`
 
+`npm install @mui/x-date-pickers`
+
+`npm install moment`
+
 `npm install dayjs`
 
 ## [Customization](https://mui.com/zh/material-ui/customization/theming/)
