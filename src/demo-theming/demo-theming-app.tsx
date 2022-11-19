@@ -7,6 +7,13 @@ export function DemoThemingApp() {
   };
   return (
     <>
+      <p>TextField ThemeProvider</p>
+      <ThemeProvider theme={scopeTheme}>
+        <TextField></TextField>
+      </ThemeProvider>
+      <p>ThemeProvider Style</p>
+      <ScopeTextField></ScopeTextField>
+
       <p>Autocomplete</p>
       <Autocomplete
         disablePortal
@@ -82,3 +89,25 @@ const AutocompleteStyle = styled(Autocomplete)({
     },
   },
 });
+
+export const scopeTheme = createTheme({
+  components: {
+    MuiButton: {
+      defaultProps: {
+        size: 'medium',
+      },
+      styleOverrides: {
+      },
+      variants: [],
+    },
+  }
+});
+
+export const ScopeTextField = styled(TextField)({
+  '.MuiOutlinedInput-root': {
+    '.MuiOutlinedInput-input': {
+      background: 'green',
+    },
+  }
+});
+
